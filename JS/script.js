@@ -11,7 +11,7 @@ var container = document.querySelector(".container");
 
 const user = {
   foto: ,
-  nome: `Wayne Barnett`,
+  nome: `Wayne Barngggett`,
   posto: `Founder & CEO`,
 } 
 // Agregar los elementos h1 y h2 al contenedor
