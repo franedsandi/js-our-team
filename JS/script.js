@@ -1,19 +1,58 @@
-// Crear un elemento h1
+
 var h1 = document.createElement("h1");
 h1.textContent = "Our Team";
 
-// Crear un elemento h2 con texto lorem ipsum
 var h2 = document.createElement("h2");
 h2.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac libero a ipsum bibendum euismod. ";
 
-// Obtener el contenedor div con clase "container"
 var container = document.querySelector(".container");
 
-const user = {
-  foto: ,
-  nome: `Wayne Barnett`,
-  posto: `Founder & CEO`,
-} 
-// Agregar los elementos h1 y h2 al contenedor
 container.appendChild(h1);
 container.appendChild(h2);
+
+const team =[
+  {
+  foto: 'wayne-barnett-founder-ceo.jpg',
+  name: 'Wayne Barnett',
+  role:'CEO & Founder' ,
+},
+{
+  foto: 'angela-caroll-chief-editor.jpg',
+  name : 'Angela Caroll',
+  role: 'Chief Editor',
+},
+{
+  foto: 'walter-gordon-office-manager.jpg',
+  name : 'Walter Gordon',
+  role: 'Office Manager'  
+},
+{
+  foto: 'angela-lopez-social-media-manager.jpg',
+  name : 'Angela Lopez',
+  role: 'Social Media Manager'  
+},
+{
+  foto: 'scott-estrada-developer.jpg',
+  name : 'Scott Estrada',
+  role: 'Developer'  
+},
+{
+  foto: 'barbara-ramos-graphic-designer.jpg',
+  name : 'Barbara Ramos',
+  role: 'Graphic Designer'  
+},]
+
+const deck = document.getElementById('cardsdeck')
+ for(let member of team){
+  console.log(member)
+  deck.innerHTML += `<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="./img/${member.foto}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${member.name}</h5>
+        <p class="card-text">${member.role}</p>
+      </div>
+    </div>
+  </div> `
+ }
