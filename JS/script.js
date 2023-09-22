@@ -50,8 +50,27 @@ const team =[
 const deck = document.getElementById('cardsdeck')
 deck.innerHTML += `<div id= "deck-manager" class="row row-cols-1 row-cols-md-3 mx-5 g-4"></div>`
 const manager = document.getElementById('deck-manager')
+/* for each */
+team.forEach ((member)=>{
+  // 3.
+  console.log(member)
+  manager.innerHTML += 
+    // 4. 5.
+  `<div class="col">
+  <div class="card border-0 rounded-0">
+    <div class="img">
+      <img src="./img/${member.foto}" class="card-img-top rounded-0" alt="${member.name}">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title fw-bold color-grey">${member.name}</h5>
+      <p class="card-text color-grey">${member.role}</p>
+    </div>
+  </div>
+</div>`
+})
 
- for(let member of team){
+/* solo for of */
+/*  for (let member of team){
   // 3.
   console.log(member)
   manager.innerHTML += 
@@ -67,4 +86,4 @@ const manager = document.getElementById('deck-manager')
       </div>
     </div>
   </div>`
- }
+ } */
