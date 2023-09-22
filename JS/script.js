@@ -50,6 +50,7 @@ const team =[
 const deck = document.getElementById('cardsdeck')
 deck.innerHTML += `<div id= "deck-manager" class="row row-cols-1 row-cols-md-3 mx-5 g-4"></div>`
 const manager = document.getElementById('deck-manager')
+
  for(let member of team){
   // 3.
   console.log(member)
@@ -57,10 +58,12 @@ const manager = document.getElementById('deck-manager')
   // 4. 5.
   `<div class="col">
     <div class="card border-0 rounded-0">
-      <img src="./img/${member.foto}" class="card-img-top rounded-0" alt="...">
+      <div class="img">
+        <img src="./img/${member.foto}" class="card-img-top rounded-0" alt="${member.name}">
+      </div>
       <div class="card-body">
-        <h5 class="card-title text-center">${member.name}</h5>
-        <p class="card-text text-center">${member.role}</p>
+        <h5 class="card-title fw-bold color-grey">${member.name}</h5>
+        <p class="card-text color-grey">${member.role}</p>
       </div>
     </div>
   </div>`
